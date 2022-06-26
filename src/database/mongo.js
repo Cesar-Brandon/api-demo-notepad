@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
+const DB_URI =
+  "mongodb+srv://Brandon:i0h6l4vAXoBUqnfq@cluster0.hzkiu.mongodb.net/api-notepad?retryWrites=true&w=majority";
 
 const dbConnect = () => {
-  const DB_URI =
-    "mongodb+srv://Brandon:i0h6l4vAXoBUqnfq@cluster0.hzkiu.mongodb.net/api-notepad?retryWrites=true&w=majority";
   mongoose.connect(
     DB_URI,
     {
@@ -12,9 +12,9 @@ const dbConnect = () => {
     (err, res) => {
       {
         if (!err) {
-          console.log("Conexion Correcta");
+          console.log("DB : Conexion Correcta");
         } else {
-          console.log("Error en la conexion");
+          console.log("DB : Error en la conexion");
         }
       }
     }
