@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
-const DB_URI =
-  "mongodb+srv://Brandon:i0h6l4vAXoBUqnfq@cluster0.hzkiu.mongodb.net/api-notepad?retryWrites=true&w=majority";
+const DB_URI = process.env.MONGODB_URI;
 
 const dbConnect = () => {
   mongoose.connect(
