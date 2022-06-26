@@ -1,8 +1,8 @@
-require("dotenv").config();
 const mongoose = require("mongoose");
 
 const dbConnect = () => {
-  const DB_URI = process.env.DB_URI;
+  const DB_URI =
+    "mongodb+srv://Brandon:i0h6l4vAXoBUqnfq@cluster0.hzkiu.mongodb.net/api-notepad?retryWrites=true&w=majority";
   mongoose.connect(
     DB_URI,
     {
