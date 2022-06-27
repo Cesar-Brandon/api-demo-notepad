@@ -9,7 +9,8 @@ const PORT = process.env.PORT || 3001;
 //Settings
 
 //Middlewares
-app.use(cors());
+const whiteList = ["https://api-demo-notepad.herokuapp.com/"];
+app.use(cors({ origin: whiteList }));
 app.use(express.json());
 
 //Routes
